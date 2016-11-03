@@ -1,0 +1,28 @@
+﻿@model MVCCurrencyCalculator.Models.CurrencyModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("Userinput", Model.Userinput.ToString())
+    <br />
+    <input type="submit" name="submit" value="Convert from kr to euro" />
+    <input type="submit" name="submit" value="Get exchange rate" />
+    <br />
+    @Html.Label("Result", ("Result: " + Model.Result.ToString()))
+}
