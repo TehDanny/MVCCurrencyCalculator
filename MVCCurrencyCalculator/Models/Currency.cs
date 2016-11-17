@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MVCCurrencyCalculator.Models
 {
-    public class CurrencyModel
+    public class Currency
     {
         //[StringLength(8, ErrorMessage = "Input can't be longer than 8 characters. This is just a datanotation test.")]
         private string userinput;

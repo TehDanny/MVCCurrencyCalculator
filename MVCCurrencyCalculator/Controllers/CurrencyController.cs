@@ -12,14 +12,14 @@ namespace MVCCurrencyCalculator.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            Models.CurrencyModel model = new Models.CurrencyModel();
+            Models.Currency model = new Models.Currency();
             model.Userinput = string.Empty;
             model.Result = string.Empty;
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(string submit, Models.CurrencyModel model)
+        public ActionResult Index(string submit, Models.Currency model)
         {
             string res = string.Empty;
             if (model.Userinput == null)
