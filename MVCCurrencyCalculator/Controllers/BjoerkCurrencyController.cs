@@ -18,7 +18,7 @@ namespace MVCCurrencyCalculator.Controllers
         }
 
         // GET: BjoerkCurrency/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             return View();
         }
@@ -46,14 +46,18 @@ namespace MVCCurrencyCalculator.Controllers
         }
 
         // GET: BjoerkCurrency/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            List<Models.BjoerkCurrency> currencies = new List<Models.BjoerkCurrency>();
+            currencies.Add(new Models.BjoerkCurrency("EUR", "Euro", 745.99M));
+            currencies.Add(new Models.BjoerkCurrency("SEK", "Sweden", 78.21M));
+            Models.BjoerkCurrency chosenCurrency = currencies[0];
+            return View(chosenCurrency);
         }
 
         // POST: BjoerkCurrency/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(string id, Models.BjoerkCurrency model)
         {
             try
             {
@@ -68,14 +72,14 @@ namespace MVCCurrencyCalculator.Controllers
         }
 
         // GET: BjoerkCurrency/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
             return View();
         }
 
         // POST: BjoerkCurrency/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(string id, FormCollection collection)
         {
             try
             {
