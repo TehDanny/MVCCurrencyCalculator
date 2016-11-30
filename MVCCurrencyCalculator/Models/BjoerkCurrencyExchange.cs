@@ -22,5 +22,11 @@ namespace MVCCurrencyCalculator.Models
             AmountFrom = amountFrom;
             AmountTo = amountTo;
         }
+
+        public BjoerkCurrencyExchange()
+        {
+            CurrencyFrom = new BjoerkCurrency("", "", 0);
+            CurrencyTo = new BjoerkCurrency("", "", 0);
+        }
     }
 }

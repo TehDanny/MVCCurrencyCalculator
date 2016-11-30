@@ -166,6 +166,7 @@
     <Content Include="Views\BjoerkCurrency\Edit.cshtml" />
     <Content Include="Views\BjoerkCurrency\Index.cshtml" />
     <Content Include="Views\BjoerkCurrencyExchange\Index.cshtml" />
+    <Content Include="Views\BjoerkCurrencyExchange\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

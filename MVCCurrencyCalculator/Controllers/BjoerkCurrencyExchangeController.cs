@@ -31,12 +31,13 @@ namespace MVCCurrencyCalculator.Controllers
         // GET: BjoerkCurrencyExchange/Create
         public ActionResult Create()
         {
-            return View();
+            Models.BjoerkCurrencyExchange model = new Models.BjoerkCurrencyExchange();
+            return View(model);
         }
 
         // POST: BjoerkCurrencyExchange/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Models.BjoerkCurrencyExchange model)
         {
             try
             {
